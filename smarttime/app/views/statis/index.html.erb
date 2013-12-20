@@ -1,10 +1,10 @@
-<h1>Listing statis</h1>
+<h1>Übersicht - Status eines Leihwagen</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th>Status</th>
+      <th>Beschreibung</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= stati.name %></td>
         <td><%= stati.description %></td>
-        <td><%= link_to 'Show', stati %></td>
-        <td><%= link_to 'Edit', edit_stati_path(stati) %></td>
-        <td><%= link_to 'Destroy', stati, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Status anzeigen', stati %></td>
+        <td><%= link_to 'Status bearbeiten', edit_stati_path(stati) %></td>
+        <td><%= link_to 'Status löschen', stati, method: :delete, data: { confirm: 'Status wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Stati', new_stati_path %>
+<%= link_to 'Neuen Status erfassen', new_stati_path %>
