@@ -1,0 +1,29 @@
+<h1>Listing statis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @statis.each do |stati| %>
+      <tr>
+        <td><%= stati.name %></td>
+        <td><%= stati.description %></td>
+        <td><%= link_to 'Show', stati %></td>
+        <td><%= link_to 'Edit', edit_stati_path(stati) %></td>
+        <td><%= link_to 'Destroy', stati, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stati', new_stati_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131220211504) do
+ActiveRecord::Schema.define(version: 20131220212057) do
 
   create_table "hirecars", force: true do |t|
     t.string   "badge"
@@ -22,8 +22,15 @@ ActiveRecord::Schema.define(version: 20131220211504) do
     t.text     "comment"
     t.text     "defect"
     t.boolean  "smoking"
-    t.integer  "status_id"
+    t.integer  "stati_id"
     t.datetime "tech_check"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "statis", force: true do |t|
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
