@@ -1,18 +1,18 @@
-<h1>Listing hirecars</h1>
+<h1>Übersicht der Leihwagen - SMP Automobilhandel AG Saarbrücken</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Badge</th>
-      <th>Regestration date</th>
-      <th>Fuel</th>
-      <th>Brand</th>
-      <th>Model</th>
-      <th>Comment</th>
-      <th>Defect</th>
-      <th>Smoking</th>
-      <th>Status</th>
-      <th>Tech check</th>
+      <th>Amtl. Kennzeichen</th>
+      <th>Erstzulassung</th>
+      <th>Kraftstoffart</th>
+      <th>Marke</th>
+      <th>Modell</th>
+      <th>Kommentar</th>
+      <th>Bekannte Defekte / Beschädigungen</th>
+      <th>Raucher ?</th>
+      <th>Status des Leihwagen</th>
+      <th>Technik-Check</th>
       <th></th>
       <th></th>
       <th></th>
@@ -32,9 +32,9 @@
         <td><%= hirecar.smoking %></td>
         <td><%= hirecar.stati.name %></td>
         <td><%= hirecar.tech_check %></td>
-        <td><%= link_to 'Show', hirecar %></td>
-        <td><%= link_to 'Edit', edit_hirecar_path(hirecar) %></td>
-        <td><%= link_to 'Destroy', hirecar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Leihwagen anzeigen', hirecar %></td>
+        <td><%= link_to 'Leihwagen bearbeiten', edit_hirecar_path(hirecar) %></td>
+        <td><%= link_to 'Leihwagen löschen', hirecar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Hirecar', new_hirecar_path %>
+<%= link_to 'Neuen Leihwagen erfassen', new_hirecar_path %>

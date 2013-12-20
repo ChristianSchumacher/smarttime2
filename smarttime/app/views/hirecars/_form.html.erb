@@ -12,46 +12,46 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :badge %><br>
+    <%= f.label :badge, 'Amtl. Kennzeichen' %><br>
     <%= f.text_field :badge %>
   </div>
   <div class="field">
-    <%= f.label :regestration_date %><br>
+    <%= f.label :regestration_date, 'Erstzulassung' %><br>
     <%= f.datetime_select :regestration_date %>
   </div>
   <div class="field">
-    <%= f.label :fuel %><br>
+    <%= f.label :fuel, 'Kraftstoffart' %><br>
     <%= f.text_field :fuel %>
   </div>
   <div class="field">
-    <%= f.label :brand %><br>
+    <%= f.label :brand, 'Marke' %><br>
     <%= f.text_field :brand %>
   </div>
   <div class="field">
-    <%= f.label :model %><br>
+    <%= f.label :model, 'Modell' %><br>
     <%= f.text_field :model %>
   </div>
   <div class="field">
-    <%= f.label :comment %><br>
+    <%= f.label :comment, 'Kommentar' %><br>
     <%= f.text_area :comment %>
   </div>
   <div class="field">
-    <%= f.label :defect %><br>
+    <%= f.label :defect, 'Bekannte Defekte / Beschädigungen' %><br>
     <%= f.text_area :defect %>
   </div>
   <div class="field">
-    <%= f.label :smoking %><br>
+    <%= f.label :smoking, 'Raucher' %><br>
     <%= f.check_box :smoking %>
   </div>
   <div class="field">
-    <%= f.label :stati_id %><br>
+    <%= f.label :stati_id, 'Status des Leihwagens' %><br>
     <%= f.collection_select :stati_id, Stati.all, :id, :name %>
   </div>
   <div class="field">
-    <%= f.label :tech_check %><br>
+    <%= f.label :tech_check, 'Technik-Check' %><br>
     <%= f.datetime_select :tech_check %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Neuen Leihwagen erfassen' %>
   </div>
 <% end %>
