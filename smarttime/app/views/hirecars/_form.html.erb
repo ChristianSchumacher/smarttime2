@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :stati_id %><br>
-    <%= f.number_field :stati_id %>
+    <%= f.collection_select :stati_id, Stati.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :tech_check %><br>
