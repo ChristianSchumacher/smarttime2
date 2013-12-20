@@ -1,0 +1,2 @@
+module HirecarsHelper
+end

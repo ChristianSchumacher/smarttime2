@@ -1,0 +1,45 @@
+<h1>Listing hirecars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Badge</th>
+      <th>Regestration date</th>
+      <th>Fuel</th>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Comment</th>
+      <th>Defect</th>
+      <th>Smoking</th>
+      <th>Status</th>
+      <th>Tech check</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hirecars.each do |hirecar| %>
+      <tr>
+        <td><%= hirecar.badge %></td>
+        <td><%= hirecar.regestration_date %></td>
+        <td><%= hirecar.fuel %></td>
+        <td><%= hirecar.brand %></td>
+        <td><%= hirecar.model %></td>
+        <td><%= hirecar.comment %></td>
+        <td><%= hirecar.defect %></td>
+        <td><%= hirecar.smoking %></td>
+        <td><%= hirecar.status_id %></td>
+        <td><%= hirecar.tech_check %></td>
+        <td><%= link_to 'Show', hirecar %></td>
+        <td><%= link_to 'Edit', edit_hirecar_path(hirecar) %></td>
+        <td><%= link_to 'Destroy', hirecar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hirecar', new_hirecar_path %>
