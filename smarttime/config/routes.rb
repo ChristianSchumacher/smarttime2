@@ -1,4 +1,6 @@
 Smarttime::Application.routes.draw do
+  resources :activities
+
   resources :statis
 
   resources :hirecars

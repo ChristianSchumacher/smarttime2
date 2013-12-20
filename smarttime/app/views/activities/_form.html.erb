@@ -1,0 +1,61 @@
+<%= form_for(@activity) do |f| %>
+  <% if @activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+      <% @activity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :appointment_date %><br>
+    <%= f.date_select :appointment_date %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.time_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.time_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :allocated_at %><br>
+    <%= f.number_field :allocated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :work_id %><br>
+    <%= f.number_field :work_id %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_time %><br>
+    <%= f.time_select :activity_time %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.number_field :customer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :hire_car_id %><br>
+    <%= f.number_field :hire_car_id %>
+  </div>
+  <div class="field">
+    <%= f.label :direct_contact %><br>
+    <%= f.check_box :direct_contact %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_service_agreement %><br>
+    <%= f.check_box :customer_service_agreement %>
+  </div>
+  <div class="field">
+    <%= f.label :data_privacy_statement %><br>
+    <%= f.check_box :data_privacy_statement %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131220212057) do
+ActiveRecord::Schema.define(version: 20131220213012) do
+
+  create_table "activities", force: true do |t|
+    t.date     "appointment_date"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.integer  "allocated_at"
+    t.integer  "work_id"
+    t.time     "activity_time"
+    t.integer  "customer_id"
+    t.integer  "hire_car_id"
+    t.boolean  "direct_contact"
+    t.boolean  "customer_service_agreement"
+    t.boolean  "data_privacy_statement"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "hirecars", force: true do |t|
     t.string   "badge"

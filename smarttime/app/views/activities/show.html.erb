@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Appointment date:</strong>
+  <%= @activity.appointment_date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @activity.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @activity.end_time %>
+</p>
+
+<p>
+  <strong>Allocated at:</strong>
+  <%= @activity.allocated_at %>
+</p>
+
+<p>
+  <strong>Work:</strong>
+  <%= @activity.work_id %>
+</p>
+
+<p>
+  <strong>Activity time:</strong>
+  <%= @activity.activity_time %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @activity.customer_id %>
+</p>
+
+<p>
+  <strong>Hire car:</strong>
+  <%= @activity.hire_car_id %>
+</p>
+
+<p>
+  <strong>Direct contact:</strong>
+  <%= @activity.direct_contact %>
+</p>
+
+<p>
+  <strong>Customer service agreement:</strong>
+  <%= @activity.customer_service_agreement %>
+</p>
+
+<p>
+  <strong>Data privacy statement:</strong>
+  <%= @activity.data_privacy_statement %>
+</p>
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>
