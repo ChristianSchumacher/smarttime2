@@ -12,50 +12,50 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :appointment_date %><br>
+    <%= f.label :appointment_date, 'Termin' %><br>
     <%= f.date_select :appointment_date %>
   </div>
   <div class="field">
-    <%= f.label :start_time %><br>
+    <%= f.label :start_time, 'Beginn' %><br>
     <%= f.time_select :start_time %>
   </div>
   <div class="field">
-    <%= f.label :end_time %><br>
+    <%= f.label :end_time, 'Ende' %><br>
     <%= f.time_select :end_time %>
   </div>
   <div class="field">
-    <%= f.label :allocated_at %><br>
+    <%= f.label :allocated_at, 'Zuständiger Mitarbeiter' %><br>
     <%= f.number_field :allocated_at %>
   </div>
   <div class="field">
-    <%= f.label :work_id %><br>
+    <%= f.label :work_id, 'Arbeiten' %><br>
     <%= f.number_field :work_id %>
   </div>
   <div class="field">
-    <%= f.label :activity_time %><br>
+    <%= f.label :activity_time, 'Benötigte Zeit' %><br>
     <%= f.time_select :activity_time %>
   </div>
   <div class="field">
-    <%= f.label :customer_id %><br>
+    <%= f.label :customer_id, 'Kunde' %><br>
     <%= f.number_field :customer_id %>
   </div>
   <div class="field">
-    <%= f.label :hire_car_id %><br>
+    <%= f.label :hire_car_id, 'Leihwagen benötigt?' %><br>
     <%= f.number_field :hire_car_id %>
   </div>
   <div class="field">
-    <%= f.label :direct_contact %><br>
+    <%= f.label :direct_contact, 'Direktannahme gewünscht?' %><br>
     <%= f.check_box :direct_contact %>
   </div>
   <div class="field">
-    <%= f.label :customer_service_agreement %><br>
+    <%= f.label :customer_service_agreement, 'Kundendienstmaßnahme erfolgreich?' %><br>
     <%= f.check_box :customer_service_agreement %>
   </div>
   <div class="field">
-    <%= f.label :data_privacy_statement %><br>
+    <%= f.label :data_privacy_statement, 'Datenschutzerklärung akzeptiert?' %><br>
     <%= f.check_box :data_privacy_statement %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Auftrag erfassen' %>
   </div>
 <% end %>
