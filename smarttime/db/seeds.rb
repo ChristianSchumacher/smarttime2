@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+   Stati.create("name" => 'verfuegbar', "description" => 'Der Wagen ist einsatzbereit')
+   Stati.create("name" => 'im Einsatz', "description" => 'Der Wagen steht nicht zur Verfuegung')
+   Stati.create("name" => 'in Werkstatt', "description" => 'Der Wagen muss repariert werden')
+   Stati.create("name" => 'eingetroffen', "description" => 'Der Wagen muss noch gesaeubert und betankt werden')
+
