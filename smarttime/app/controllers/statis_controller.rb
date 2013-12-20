@@ -1,5 +1,6 @@
 class StatisController < ApplicationController
   before_action :set_stati, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /statis
   # GET /statis.json
