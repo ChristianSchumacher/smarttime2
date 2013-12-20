@@ -29,16 +29,6 @@ ActiveRecord::Schema.define(version: 20131220224408) do
     t.datetime "updated_at"
   end
 
-  create_table "assets", force: true do |t|
-    t.string   "asset_file_name"
-    t.string   "asset_content_type"
-    t.integer  "asset_file_size"
-    t.datetime "asset_updated_at"
-    t.integer  "hirecar_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "hirecars", force: true do |t|
     t.string   "badge"
     t.datetime "regestration_date"
@@ -52,10 +42,6 @@ ActiveRecord::Schema.define(version: 20131220224408) do
     t.datetime "tech_check"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.string   "image_file_size"
-    t.datetime "image_updated_at"
   end
 
   create_table "statis", force: true do |t|
