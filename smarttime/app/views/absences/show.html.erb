@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Start day:</strong>
+  <strong>Beginn:</strong>
   <%= @absence.start_day %>
 </p>
 
 <p>
-  <strong>End day:</strong>
+  <strong>Ende:</strong>
   <%= @absence.end_day %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Mitarbeiter:</strong>
   <%= @absence.user_id %>
 </p>
 
 <p>
-  <strong>Reason:</strong>
+  <strong>Begründung:</strong>
   <%= @absence.reason %>
 </p>
 
 <p>
-  <strong>Comment:</strong>
+  <strong>Kommentar:</strong>
   <%= @absence.comment %>
 </p>
 
-<%= link_to 'Edit', edit_absence_path(@absence) %> |
-<%= link_to 'Back', absences_path %>
+<%= link_to 'Abwesenheit bearbeiten', edit_absence_path(@absence) %> |
+<%= link_to 'Zurück', absences_path %>

@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :start_day %><br>
+    <%= f.label :start_day, 'Beginn' %><br>
     <%= f.date_select :start_day %>
   </div>
   <div class="field">
-    <%= f.label :end_day %><br>
+    <%= f.label :end_day, 'Ende' %><br>
     <%= f.date_select :end_day %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
+    <%= f.label :user_id, 'Mitarbeiter' %><br>
     <%= f.number_field :user_id %>
   </div>
   <div class="field">
-    <%= f.label :reason %><br>
+    <%= f.label :reason, 'Begründung' %><br>
     <%= f.text_field :reason %>
   </div>
   <div class="field">
-    <%= f.label :comment %><br>
+    <%= f.label :comment, 'Kommentar' %><br>
     <%= f.text_area :comment %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Neue Abwesenheit erfassen' %>
   </div>
 <% end %>

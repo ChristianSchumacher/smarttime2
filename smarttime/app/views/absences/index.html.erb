@@ -1,13 +1,13 @@
-<h1>Listing absences</h1>
+<h1>Übersicht aller Abwesenheiten - SMP Automobilhandel AG Saarbrücken</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Start day</th>
-      <th>End day</th>
-      <th>User</th>
-      <th>Reason</th>
-      <th>Comment</th>
+      <th>Beginn</th>
+      <th>Ende</th>
+      <th>Mitarbeiter</th>
+      <th>Begründung</th>
+      <th>Kommentar</th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,9 +22,9 @@
         <td><%= absence.user_id %></td>
         <td><%= absence.reason %></td>
         <td><%= absence.comment %></td>
-        <td><%= link_to 'Show', absence %></td>
-        <td><%= link_to 'Edit', edit_absence_path(absence) %></td>
-        <td><%= link_to 'Destroy', absence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Abwesenheit anzeigen', absence %></td>
+        <td><%= link_to 'Abwesenheit bearbeiten', edit_absence_path(absence) %></td>
+        <td><%= link_to 'Abwesenheit löschen', absence, method: :delete, data: { confirm: 'Abwesenheit wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Absence', new_absence_path %>
+<%= link_to 'Neue Abwesenheit erfassen', new_absence_path %>
