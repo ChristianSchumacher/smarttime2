@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_day: 2013-12-21
+  end_day: 2013-12-21
+  user_id: 1
+  reason: MyString
+  comment: MyText
+
+two:
+  start_day: 2013-12-21
+  end_day: 2013-12-21
+  user_id: 1
+  reason: MyString
+  comment: MyText

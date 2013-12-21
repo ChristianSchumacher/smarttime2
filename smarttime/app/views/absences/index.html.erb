@@ -1,0 +1,35 @@
+<h1>Listing absences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start day</th>
+      <th>End day</th>
+      <th>User</th>
+      <th>Reason</th>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @absences.each do |absence| %>
+      <tr>
+        <td><%= absence.start_day %></td>
+        <td><%= absence.end_day %></td>
+        <td><%= absence.user_id %></td>
+        <td><%= absence.reason %></td>
+        <td><%= absence.comment %></td>
+        <td><%= link_to 'Show', absence %></td>
+        <td><%= link_to 'Edit', edit_absence_path(absence) %></td>
+        <td><%= link_to 'Destroy', absence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Absence', new_absence_path %>
