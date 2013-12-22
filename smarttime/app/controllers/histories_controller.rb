@@ -1,3 +1,4 @@
+# coding: utf-8
 class HistoriesController < ApplicationController
   before_action :set_history, only: [:show, :edit, :update, :destroy]
 

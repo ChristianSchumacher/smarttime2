@@ -1,3 +1,4 @@
+# coding: utf-8
 class HirecarsController < ApplicationController
   before_action :set_hirecar, only: [:show, :edit, :update, :destroy]
 

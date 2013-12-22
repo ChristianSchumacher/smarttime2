@@ -1,3 +1,4 @@
+# coding: utf-8
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
