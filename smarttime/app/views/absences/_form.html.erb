@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :start_day, 'Beginn' %><br>
-    <%= f.date_select :start_day %>
+    <%= f.text_field :start_day, :value => Date.today.strftime("%d.%m.%Y") %>
   </div>
   <div class="field">
     <%= f.label :end_day, 'Ende' %><br>
-    <%= f.date_select :end_day %>
+    <%= f.text_field :end_day, :value => (Date.today+1).strftime("%d.%m.%Y") %>
   </div>
   <div class="field">
     <%= f.label :user_id, 'Mitarbeiter' %><br>
