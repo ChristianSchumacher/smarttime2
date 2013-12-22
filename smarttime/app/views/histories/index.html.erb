@@ -3,9 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Action</th>
-      <th>User</th>
-      <th>Description</th>
+      <th>Aktion</th>
+      <th>Benutzer</th>
+      <th>Beschreibung</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,9 +18,6 @@
         <td><%= history.action %></td>
         <td><%= history.user_id %></td>
         <td><%= history.description %></td>
-        <td><%= link_to 'Show', history %></td>
-        <td><%= link_to 'Edit', edit_history_path(history) %></td>
-        <td><%= link_to 'Destroy', history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
