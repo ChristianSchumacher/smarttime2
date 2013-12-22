@@ -1,3 +1,4 @@
+# coding: utf-8
 class StatisController < ApplicationController
   before_action :set_stati, only: [:show, :edit, :update, :destroy]
   
