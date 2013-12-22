@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131221142415) do
+ActiveRecord::Schema.define(version: 20131222142724) do
 
   create_table "absences", force: true do |t|
     t.date     "start_day"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(version: 20131221142415) do
     t.boolean  "smoking"
     t.integer  "stati_id"
     t.datetime "tech_check"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "histories", force: true do |t|
+    t.string   "action"
+    t.integer  "user_id"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
