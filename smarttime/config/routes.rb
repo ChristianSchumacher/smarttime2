@@ -1,4 +1,6 @@
 Smarttime::Application.routes.draw do
+  resources :histories
+
   resources :absences
 
   devise_for :users
