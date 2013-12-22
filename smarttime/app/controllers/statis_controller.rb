@@ -29,6 +29,7 @@ class StatisController < ApplicationController
 
     respond_to do |format|
       if @stati.save
+        History.create("action"=>"add","user_id" => current_user.id, "description" =>"Status angelegt")
         format.html { redirect_to @stati, notice: 'Stati was successfully created.' }
         format.json { render action: 'show', status: :created, location: @stati }
       else
@@ -43,6 +44,7 @@ class StatisController < ApplicationController
   def update
     respond_to do |format|
       if @stati.update(stati_params)
+        History.create("action"=>"change","user_id" => current_user.id, "description" =>"Status geändert")
         format.html { redirect_to @stati, notice: 'Stati was successfully updated.' }
         format.json { head :no_content }
       else
@@ -56,6 +58,7 @@ class StatisController < ApplicationController
   # DELETE /statis/1.json
   def destroy
     @stati.destroy
+    History.create("action"=>"del","user_id" => current_user.id, "description" =>"Status gelöscht")
     respond_to do |format|
       format.html { redirect_to statis_url }
       format.json { head :no_content }

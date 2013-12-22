@@ -28,6 +28,7 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       if @activity.save
+        History.create("action"=>"add","user_id" => current_user.id, "description" =>"Auftrag angelegt")
         format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
         format.json { render action: 'show', status: :created, location: @activity }
       else
@@ -41,6 +42,7 @@ class ActivitiesController < ApplicationController
   # PATCH/PUT /activities/1.json
   def update
     respond_to do |format|
+         History.create("action"=>"change","user_id" => current_user.id, "description" => "Auftrag geändert")
       if @activity.update(activity_params)
         format.html { redirect_to @activity, notice: 'Activity was successfully updated.' }
         format.json { head :no_content }
@@ -55,6 +57,7 @@ class ActivitiesController < ApplicationController
   # DELETE /activities/1.json
   def destroy
     @activity.destroy
+       History.create("action"=>"del","user_id" => current_user.id, "description" => "Auftrag gelöscht")
     respond_to do |format|
       format.html { redirect_to activities_url }
       format.json { head :no_content }

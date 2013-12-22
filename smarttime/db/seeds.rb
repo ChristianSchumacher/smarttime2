@@ -11,5 +11,7 @@
    Stati.create("name" => 'im Einsatz', "description" => 'Der Wagen steht nicht zur Verfuegung')
    Stati.create("name" => 'in Werkstatt', "description" => 'Der Wagen muss repariert werden')
    Stati.create("name" => 'eingetroffen', "description" => 'Der Wagen muss noch gesaeubert und betankt werden')
-   
+  
    Hirecar.create("badge" =>"ohne", "stati_id" => 1,"comment" => "Dieser Eintrag wird gewaehlt wenn der Kunde keinen Leihwagen bekommt")
+   
+   History.create("action"=>"init", "description" =>"Seed-Daten (Test-Daten) eingespielt")

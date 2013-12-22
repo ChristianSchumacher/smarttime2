@@ -1,4 +1,4 @@
-<h1>Listing histories</h1>
+<h1>SMART-Time Historie </h1>
 
 <table>
   <thead>
@@ -16,13 +16,14 @@
     <% @histories.each do |history| %>
       <tr>
         <td><%= history.action %></td>
-        <td><%= history.user_id %></td>
+        <% unless history.user.nil? %>
+        <td><%= history.user.email %></td>
+        <% else %>
+        <td></td>
+        <% end %>
         <td><%= history.description %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New History', new_history_path %>
