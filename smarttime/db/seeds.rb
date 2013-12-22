@@ -5,8 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#ACHTUNG: Bei den Seed-Daten dürfen keine Umlaute (Ä,Ö,Ü,ä,ü,ö) enthalten sein.
+
    Stati.create("name" => 'verfuegbar', "description" => 'Der Wagen ist einsatzbereit')
    Stati.create("name" => 'im Einsatz', "description" => 'Der Wagen steht nicht zur Verfuegung')
    Stati.create("name" => 'in Werkstatt', "description" => 'Der Wagen muss repariert werden')
    Stati.create("name" => 'eingetroffen', "description" => 'Der Wagen muss noch gesaeubert und betankt werden')
-
+   
+   Hirecar.create("badge" =>"ohne", "stati_id" => 1,"comment" => "Dieser Eintrag wird gewaehlt wenn der Kunde keinen Leihwagen bekommt")

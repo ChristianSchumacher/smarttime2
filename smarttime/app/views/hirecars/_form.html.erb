@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :badge, 'Amtl. Kennzeichen' %><br>
-    <%= f.text_field :badge %>
+    <%= f.text_field :badge, :value => 'SB-' %>
   </div>
   <div class="field">
     <%= f.label :regestration_date, 'Erstzulassung' %><br>
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :fuel, 'Kraftstoffart' %><br>
-    <%= f.text_field :fuel %>
+    <%= f.select :fuel, [['Diesel', 'Diesel'], ['Benzin', 'Benzin'], ['Gas', 'Gas'], ['Hybrid', 'Hybrid']]%>
   </div>
   <div class="field">
     <%= f.label :brand, 'Marke' %><br>
@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :stati_id, 'Status des Leihwagens' %><br>
-    <%= f.collection_select(:stati_id,  Stati.all, :id, :name ) %>
+    <%= f.collection_select :stati_id, Stati.all, :id, :name, :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label :tech_check, 'Technik-Check' %><br>
