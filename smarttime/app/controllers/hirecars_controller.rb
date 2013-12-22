@@ -14,7 +14,9 @@ class HirecarsController < ApplicationController
 
   # GET /hirecars/new
   def new
+    logger.debug "!!!!!!!!!!!!!!!!!!!!! #{current_user]}"
     @hirecar = Hirecar.new
+    logger.debug "!!!!!!!!!!!!!!!!!!!!! #{current_user]}"
   end
 
   # GET /hirecars/1/edit
@@ -25,7 +27,7 @@ class HirecarsController < ApplicationController
   # POST /hirecars.json
   def create
     @hirecar = Hirecar.new(hirecar_params)
-
+    
     respond_to do |format|
       if @hirecar.save
         format.html { redirect_to @hirecar, notice: 'Hirecar was successfully created.' }
