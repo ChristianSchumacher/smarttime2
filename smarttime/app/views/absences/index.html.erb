@@ -19,7 +19,7 @@
       <tr>
         <td><%= absence.start_day %></td>
         <td><%= absence.end_day %></td>
-        <td><%= absence.user_id %></td>
+        <td><%= absence.user.email.split('@')[0] %></td>
         <td><%= absence.reason %></td>
         <td><%= absence.comment %></td>
         <td><%= link_to 'Abwesenheit anzeigen', absence %></td>

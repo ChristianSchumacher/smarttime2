@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :user_id, 'Mitarbeiter' %><br>
-    <%= f.number_field :user_id %>
+    <%= f.collection_select :user_id, @users, :id, :email %>
   </div>
   <div class="field">
     <%= f.label :reason, 'Begründung' %><br>
-    <%= f.text_field :reason %>
+    <%= f.select :reason, [['Urlaub', 'Urlaub'], ['Krankheit', 'Krankheit'], ['Rückfeiern', 'Rückfeiern'], ['Weiterbildung', 'Weiterbildung'], ['Messe', 'Messe']]%>
   </div>
   <div class="field">
     <%= f.label :comment, 'Kommentar' %><br>

@@ -1,3 +1,4 @@
+# coding: utf-8
 class AbsencesController < ApplicationController
   before_action :set_absence, only: [:show, :edit, :update, :destroy]
 
@@ -15,6 +16,7 @@ class AbsencesController < ApplicationController
   # GET /absences/new
   def new
     @absence = Absence.new
+    @users = User.all
   end
 
   # GET /absences/1/edit
@@ -28,6 +30,7 @@ class AbsencesController < ApplicationController
 
     respond_to do |format|
       if @absence.save
+        History.create("action"=>"add","user_id" => current_user.id, "description" =>"Abwesenheit wurde eingetragen")
         format.html { redirect_to @absence, notice: 'Absence was successfully created.' }
         format.json { render action: 'show', status: :created, location: @absence }
       else
@@ -41,6 +44,7 @@ class AbsencesController < ApplicationController
   # PATCH/PUT /absences/1.json
   def update
     respond_to do |format|
+      History.create("action"=>"change","user_id" => current_user.id, "description" =>"Abwesenheit wurde geändert")
       if @absence.update(absence_params)
         format.html { redirect_to @absence, notice: 'Absence was successfully updated.' }
         format.json { head :no_content }
@@ -55,6 +59,7 @@ class AbsencesController < ApplicationController
   # DELETE /absences/1.json
   def destroy
     @absence.destroy
+     History.create("action"=>"change","user_id" => current_user.id, "description" =>"Abwesenheit wurde entfernt")
     respond_to do |format|
       format.html { redirect_to absences_url }
       format.json { head :no_content }
