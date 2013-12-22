@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @holyday.date %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @holyday.name %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @holyday.country %>
+</p>
+
+<%= link_to 'Edit', edit_holyday_path(@holyday) %> |
+<%= link_to 'Back', holydays_path %>

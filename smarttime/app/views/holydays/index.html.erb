@@ -1,0 +1,31 @@
+<h1>Feiertage und Schließtage</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Datum</th>
+      <th>Name</th>
+      <th>Land</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @holydays.each do |holyday| %>
+      <tr>
+        <td><%= holyday.date %></td>
+        <td><%= holyday.name %></td>
+        <td><%= holyday.country %></td>
+        <td><%= link_to 'Show', holyday %></td>
+        <td><%= link_to 'Edit', edit_holyday_path(holyday) %></td>
+        <td><%= link_to 'Destroy', holyday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Schließtag hinzufügen', new_holyday_path %>

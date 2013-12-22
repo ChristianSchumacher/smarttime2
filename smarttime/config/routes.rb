@@ -1,4 +1,6 @@
 Smarttime::Application.routes.draw do
+  resources :holydays
+
   resources :histories
 
   resources :absences

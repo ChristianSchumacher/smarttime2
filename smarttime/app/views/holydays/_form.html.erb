@@ -1,0 +1,38 @@
+<%= form_for(@holyday) do |f| %>
+  <% if @holyday.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@holyday.errors.count, "error") %> prohibited this holyday from being saved:</h2>
+
+      <ul>
+      <% @holyday.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.text_field :day %>
+  </div>
+   <div class="field">
+    <%= f.label :month %><br>
+    <%= f.select :month, [['Januar', '1'], ['Februar', '2'], ['März', '3'], ['April', '4'], ['Mai', '5'],['Juni', '6'], ['Juli', '7'], ['August', '8'], ['September', '9'], ['Oktober', '10'], ['November', '11'], ['Dezember', '12']]%>
+  </div>
+   <div class="field">
+    <%= f.label :year %><br>
+    <%= f.text_field :year %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

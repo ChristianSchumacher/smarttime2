@@ -15,3 +15,5 @@
    Hirecar.create("badge" =>"ohne", "stati_id" => 1,"comment" => "Dieser Eintrag wird gewaehlt wenn der Kunde keinen Leihwagen bekommt")
    
    History.create("action"=>"init", "description" =>"Seed-Daten (Test-Daten) eingespielt")
+   
+   Holyday.create("date"=>"01.01","name"=>"Neujahrstag" )
