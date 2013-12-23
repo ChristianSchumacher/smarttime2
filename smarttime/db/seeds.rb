@@ -16,4 +16,4 @@
    
    History.create("action"=>"init", "description" =>"Seed-Daten (Test-Daten) eingespielt")
    
-   Holyday.create("date"=>"01.01","name"=>"Neujahrstag" )
+   Holyday.create("month" => 1, "day" => 1, "name" => "Neujahrstag" )
