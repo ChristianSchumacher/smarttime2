@@ -1,0 +1,29 @@
+<%= form_for(@navitem) do |f| %>
+  <% if @navitem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@navitem.errors.count, "error") %> prohibited this navitem from being saved:</h2>
+
+      <ul>
+      <% @navitem.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url, :title => "nur den Resourcennamen eingeben nicht den gesamten Pfad" %>
+  </div>
+  <div class="field">
+    <%= f.label :order %><br>
+    <%= f.number_field :order %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

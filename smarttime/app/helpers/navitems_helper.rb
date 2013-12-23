@@ -1,0 +1,2 @@
+module NavitemsHelper
+end

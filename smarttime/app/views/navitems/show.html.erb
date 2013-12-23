@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @navitem.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @navitem.url %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @navitem.order %>
+</p>
+
+<%= link_to 'Edit', edit_navitem_path(@navitem) %> |
+<%= link_to 'Back', navitems_path %>

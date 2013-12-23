@@ -1,4 +1,6 @@
 Smarttime::Application.routes.draw do
+  resources :navitems
+
   resources :holydays
 
   resources :histories

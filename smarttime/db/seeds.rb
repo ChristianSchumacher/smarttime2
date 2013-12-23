@@ -17,3 +17,9 @@
    History.create("action"=>"init", "description" =>"Seed-Daten (Test-Daten) eingespielt")
    
    Holyday.create("month" => 1, "day" => 1, "name" => "Neujahrstag" )
+   
+   Navitem.create("name" => "Abwesenheiten","url" => "absences", "order" => 1)
+   Navitem.create("name" => "Taetigkeiten","url" => "activities", "order" => 2)
+   Navitem.create("name" => "Leihwagen","url" => "hirecars", "order" => 3)
+   Navitem.create("name" => "Feiertage","url" => "absences", "order" => 4)
+   Navitem.create("name" => "Status","url" => "statis", "order" => 5)
