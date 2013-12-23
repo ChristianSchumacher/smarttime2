@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223222635) do
+ActiveRecord::Schema.define(version: 20131223225243) do
 
   create_table "absences", force: true do |t|
     t.date     "start_day"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 20131223222635) do
   create_table "navitems", force: true do |t|
     t.string   "name"
     t.string   "url"
-    t.integer  "order"
+    t.integer  "rang"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

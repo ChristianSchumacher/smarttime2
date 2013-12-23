@@ -18,8 +18,8 @@
    
    Holyday.create("month" => 1, "day" => 1, "name" => "Neujahrstag" )
    
-   Navitem.create("name" => "Abwesenheiten","url" => "absences", "order" => 1)
-   Navitem.create("name" => "Taetigkeiten","url" => "activities", "order" => 2)
-   Navitem.create("name" => "Leihwagen","url" => "hirecars", "order" => 3)
-   Navitem.create("name" => "Feiertage","url" => "absences", "order" => 4)
-   Navitem.create("name" => "Status","url" => "statis", "order" => 5)
+   Navitem.create("name" => "Abwesenheiten","url" => "absences", "rang" => 1)
+   Navitem.create("name" => "Auftragserfassung","url" => "activities", "rang" => 2)
+   Navitem.create("name" => "Leihwagen","url" => "hirecars", "rang" => 3)
+   Navitem.create("name" => "Feiertage","url" => "absences", "rang" => 4)
+   Navitem.create("name" => "Status","url" => "statis", "rang" => 5)
