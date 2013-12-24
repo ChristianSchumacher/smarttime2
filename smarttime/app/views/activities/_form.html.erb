@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :start_time, 'Beginn' %><br>
-    <%= f.time_select :start_time %>
+    <%= f.text_field :start_time %>
   </div>
   <div class="field">
     <%= f.label :end_time, 'Ende' %><br>
-    <%= f.time_select :end_time %>
+    <%= f.text_field :end_time %>
   </div>
   <div class="field">
     <%= f.label :allocated_at, 'Zuständiger Mitarbeiter' %><br>
-    <%= f.number_field :allocated_at %>
+    <%= f.collection_select  :allocated_at, @users, :id, :email %>
   </div>
   <div class="field">
     <%= f.label :work_id, 'Arbeiten' %><br>
@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= f.label :hire_car_id, 'Leihwagen benötigt?' %><br>
-    <%= f.number_field :hire_car_id %>
+    <%= f.collection_select  :hire_car_id, @hirecars, :id, :badge %>
   </div>
   <div class="field">
     <%= f.label :direct_contact, 'Direktannahme gewünscht?' %><br>

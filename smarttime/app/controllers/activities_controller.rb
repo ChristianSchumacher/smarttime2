@@ -16,10 +16,15 @@ class ActivitiesController < ApplicationController
   # GET /activities/new
   def new
     @activity = Activity.new
+    @users = User.all
+    @hirecars = Hirecar.where("stati_id == 1") #1 = verfügbar
+
   end
 
   # GET /activities/1/edit
   def edit
+    @users = User.all
+    @hirecars = Hirecar.where("stati_id == 1") #1 = verfügbar
   end
 
   # POST /activities

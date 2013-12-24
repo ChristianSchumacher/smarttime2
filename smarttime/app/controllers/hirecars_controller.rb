@@ -16,10 +16,12 @@ class HirecarsController < ApplicationController
   # GET /hirecars/new
   def new
     @hirecar = Hirecar.new
+    @statis = Stati.all
   end
 
   # GET /hirecars/1/edit
   def edit
+    @statis = Stati.all
   end
 
   # POST /hirecars
