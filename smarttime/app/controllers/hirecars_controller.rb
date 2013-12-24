@@ -1,6 +1,9 @@
 # coding: utf-8
 class HirecarsController < ApplicationController
   before_action :set_hirecar, only: [:show, :edit, :update, :destroy]
+  #validates_presence_of :name 
+  #validates :stati_id, :presence => {:message => 'Leihwagen muss einen Stauts erhalten'}
+  
 
   # GET /hirecars
   # GET /hirecars.json

@@ -46,7 +46,8 @@
   </div>
   <div class="field">
     <%= f.label :stati_id, 'Status des Leihwagens' %><br>
-    <%= f.collection_select  :stati_id, @statis, :id, :name %>
+    <%#= f.collection_select  :stati_id, @statis, :id, :name %>
+    <%= f.text_field :stati_id %>
   </div>
   <div class="field">
     <%= f.label :tech_check, 'Technik-Check' %><br>

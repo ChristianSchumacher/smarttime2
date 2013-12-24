@@ -1,6 +1,6 @@
 <h1>Übersicht der Leihwagen - SMP Automobilhandel AG Saarbrücken</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>Amtl. Kennzeichen</th>
@@ -23,7 +23,11 @@
     <% @hirecars.each do |hirecar| %>
       <tr>
         <td><%= hirecar.badge %></td>
-        <td><%= hirecar.regestration_date %></td>
+        <% unless hirecar.regestration_date.nil? %>
+        	<td><%= hirecar.regestration_date.strftime("%d.%m.%Y") %></td>
+        <%else%>
+        	<td></td>
+        <% end %>
         <td><%= hirecar.fuel %></td>
         <td><%= hirecar.brand %></td>
         <td><%= hirecar.model %></td>
@@ -31,7 +35,11 @@
         <td><%= hirecar.defect %></td>
         <td><%= hirecar.smoking %></td>
         <td><%= hirecar.stati_id %></td>
-        <td><%= hirecar.tech_check %></td>
+        <% unless hirecar.tech_check.nil? %>
+        	<td><%= hirecar.tech_check.strftime("%d.%m.%Y") %></td>
+    	<% else %>
+    		<td></td>
+    	<% end %>
         <td><%= link_to 'Leihwagen anzeigen', hirecar %></td>
         <td><%= link_to 'Leihwagen bearbeiten', edit_hirecar_path(hirecar) %></td>
         <td><%= link_to 'Leihwagen löschen', hirecar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
