@@ -1,27 +1,28 @@
 <h1>SMART-Time Historie </h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>Aktion</th>
       <th>Benutzer</th>
       <th>Beschreibung</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Datum</th>
+      <th>Uhrzeit</th>
     </tr>
   </thead>
 
   <tbody>
     <% @histories.each do |history| %>
       <tr>
-        <td><%= history.action %></td>
+        <td align="center"><%= history.action %></td>
         <% unless history.user.nil? %>
-        <td><%= history.user.email %></td>
+        <td align="center"><%= image_tag("#{history.user_id}.jpg", :size => "50x60") %></td>
         <% else %>
         <td></td>
         <% end %>
-        <td><%= history.description %></td>
+        <td align="center"><%= history.description %></td>
+        <td align="center"><%= history.created_at.strftime("%d.%m.%Y") %></td>
+        <td align="center"><%= history.created_at.to_s(:time)%></td>
       </tr>
     <% end %>
   </tbody>
