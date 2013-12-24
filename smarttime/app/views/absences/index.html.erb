@@ -1,10 +1,11 @@
 <h1>Übersicht aller Abwesenheiten - SMP Automobilhandel AG Saarbrücken</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>Beginn</th>
       <th>Ende</th>
+      <th>Urlaubstage</th>
       <th>Mitarbeiter</th>
       <th>Begründung</th>
       <th>Kommentar</th>
@@ -17,9 +18,10 @@
   <tbody>
     <% @absences.each do |absence| %>
       <tr>
-        <td><%= absence.start_day %></td>
-        <td><%= absence.end_day %></td>
-        <td><%= absence.user.email.split('@')[0] %></td>
+        <td><%= absence.start_day.strftime("%d.%m.%Y") %></td>
+        <td><%= absence.end_day.strftime("%d.%m.%Y") %></td>
+        <td><%= (absence.end_day - absence.start_day).to_i %></td>
+        <td><%= image_tag("#{absence.user_id}.jpg", :size => "50x60") %></td>
         <td><%= absence.reason %></td>
         <td><%= absence.comment %></td>
         <td><%= link_to 'Abwesenheit anzeigen', absence %></td>

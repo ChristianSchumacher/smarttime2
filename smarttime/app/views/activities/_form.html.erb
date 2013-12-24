@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :appointment_date, 'Termin' %><br>
-    <%= f.date_select :appointment_date %>
+    <%= f.text_field :appointment_date, :value => Date.today.strftime("%d.%m.%Y")%>
   </div>
   <div class="field">
     <%= f.label :start_time, 'Beginn' %><br>
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :work_id, 'Arbeiten' %><br>
-    <%= f.number_field :work_id %>
+    <%= f.text_area :work_id %>
   </div>
   <div class="field">
     <%= f.label :activity_time, 'Benötigte Zeit [h]' %><br>

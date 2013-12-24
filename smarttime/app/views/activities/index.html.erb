@@ -27,7 +27,7 @@
         <td><%= activity.start_time.to_s(:time) %></td>
         <td><%= activity.end_time.to_s(:time)  %></td>
         <td><%= image_tag("#{activity.allocated_at}.jpg", :size => "50x60") %></td>
-      	<td</td>        
+      	<td></td>       
         <td><%= activity.activity_time %></td>
         <td><%= activity.customer_id %></td>
         <td><%= Hirecar.find(activity.hire_car_id).badge %></td>
