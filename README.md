@@ -1,6 +1,8 @@
 Offene Punkte:
 <br>
-KK:   [ ] Feiertage auf deutsch umstellen <br>
+Klaus:
+
+      [ ] Feiertage auf deutsch umstellen <br>
       [ ] Seed.rb mit feiertagen füllen oder rake datei welche eine Feiertageliste(CSV,XLS,XLSX) einliest<br>
       [ ] Kundenverwaltunge anlegen wenn erforderlich<br>
 <br>
@@ -8,5 +10,6 @@ KK:   [ ] Feiertage auf deutsch umstellen <br>
 <br>
 
 
-CS:   [ ] Fileupload<br>
+Christian:
+      [ ] Fileupload<br>
       [ ]Datepicker einbauen
