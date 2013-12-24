@@ -1,6 +1,6 @@
 <h1>Auftragserfassung - SMP Automobilhandel AG Saarbrücken</h1>
 <%= render  'available' %>
-<table>
+<table border="2">
   <thead>
     <tr>
       <th>Termin</th>
@@ -23,14 +23,14 @@
   <tbody>
     <% @activities.each do |activity| %>
       <tr>
-        <td><%= activity.appointment_date %></td>
-        <td><%= activity.start_time %></td>
-        <td><%= activity.end_time %></td>
-        <td><%= activity.allocated_at %></td>
-        <td><%= activity.work_id %></td>
+        <td><%= activity.appointment_date.strftime("%d.%m.%Y") %></td>
+        <td><%= activity.start_time.to_s(:time) %></td>
+        <td><%= activity.end_time.to_s(:time)  %></td>
+        <td><%= image_tag("#{activity.allocated_at}.jpg", :size => "50x60") %></td>
+      	<td</td>        
         <td><%= activity.activity_time %></td>
         <td><%= activity.customer_id %></td>
-        <td><%= activity.hire_car_id %></td>
+        <td><%= Hirecar.find(activity.hire_car_id).badge %></td>
         <td><%= activity.direct_contact %></td>
         <td><%= activity.customer_service_agreement %></td>
         <td><%= activity.data_privacy_statement %></td>

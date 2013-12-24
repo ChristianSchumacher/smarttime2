@@ -32,8 +32,8 @@
     <%= f.number_field :work_id %>
   </div>
   <div class="field">
-    <%= f.label :activity_time, 'Benötigte Zeit' %><br>
-    <%= f.time_select :activity_time %>
+    <%= f.label :activity_time, 'Benötigte Zeit [h]' %><br>
+    <%= f.text_field :activity_time %>
   </div>
   <div class="field">
     <%= f.label :customer_id, 'Kunde' %><br>
