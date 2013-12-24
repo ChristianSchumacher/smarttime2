@@ -17,6 +17,11 @@
   <% unless current_user.nil? %>
   	<%= render 'layouts/navitems' %>
   <% end %>
+  <% if current_user.nil? %>
+  	<div id="smart_logo" align="center">
+  		<%= image_tag("smart-logo.png", :size => "200x200")  %>
+  	</div>
+  <% end %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
