@@ -23,3 +23,4 @@
    Navitem.create("name" => "Leihwagen","url" => "hirecars", "rang" => 3)
    Navitem.create("name" => "Feiertage","url" => "absences", "rang" => 4)
    Navitem.create("name" => "Status","url" => "statis", "rang" => 5)
+   Navitem.create("name" => "Historie","url" => "histories", "rang" => 5)
