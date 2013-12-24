@@ -78,6 +78,6 @@ class HirecarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hirecar_params
-      params.require(:hirecar).permit(:badge, :regestration_date, :fuel, :brand, :model, :comment, :defect, :smoking, :status_id, :tech_check)
+      params.require(:hirecar).permit(:badge, :regestration_date, :fuel, :brand, :model, :comment, :defect, :smoking, :stati_id, :tech_check)
     end
 end
