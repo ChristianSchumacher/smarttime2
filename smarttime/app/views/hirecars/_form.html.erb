@@ -18,7 +18,7 @@
   
   <div class="field">
     <%= f.label :regestration_date, 'Erstzulassung' %><br>
-    <%= f.datetime_select :regestration_date %>
+    <%= f.text_field :regestration_date,:value => Date.today.strftime("%d.%m.%Y")%>
   </div>
   <div class="field">
     <%= f.label :fuel, 'Kraftstoffart' %><br>
@@ -51,7 +51,7 @@
   </div>
   <div class="field">
     <%= f.label :tech_check, 'Technik-Check' %><br>
-    <%= f.datetime_select :tech_check %>
+    <%= f.text_field :tech_check ,:value => Date.today.strftime("%d.%m.%Y")%>
   </div>
   <div class="actions">
     <%= f.submit 'Neuen Leihwagen erfassen' %>
