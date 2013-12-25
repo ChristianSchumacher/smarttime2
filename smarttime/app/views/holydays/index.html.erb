@@ -1,4 +1,4 @@
-<h1>Feiertage und Schließtage</h1>
+<h1>Feiertage und Schließtage - SMP Automobilhandel AG Saarbrücken</h1>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
         <td><%= holyday.date %></td>
         <td><%= holyday.name %></td>
         <td><%= holyday.country %></td>
-        <td><%= link_to 'Show', holyday %></td>
-        <td><%= link_to 'Edit', edit_holyday_path(holyday) %></td>
-        <td><%= link_to 'Destroy', holyday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Feiertag anzeigen', holyday %></td>
+        <td><%= link_to 'Feiertag bearbeiten', edit_holyday_path(holyday) %></td>
+        <td><%= link_to 'Feiertag löschen', holyday, method: :delete, data: { confirm: 'Feiertag wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'Schließtag hinzufügen', new_holyday_path %>
+<%= link_to 'Feiertag hinzufügen', new_holyday_path %>

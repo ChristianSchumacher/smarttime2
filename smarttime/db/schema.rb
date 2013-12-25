@@ -72,14 +72,6 @@ ActiveRecord::Schema.define(version: 20131223225243) do
     t.integer  "year"
   end
 
-  create_table "nav_items", force: true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "navitems", force: true do |t|
     t.string   "name"
     t.string   "url"
