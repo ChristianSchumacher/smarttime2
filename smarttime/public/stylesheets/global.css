@@ -1,0 +1,40 @@
+body {
+  background-color: #F0F0F0 ;
+}
+#container {
+  width: 500px;
+  margin: 0 auto;
+}
+#header {
+  background-color: #006999;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+h1 {
+  margin-left: 70%;
+  font-size: 1.1em;
+  margin-top: 0.1em;
+  background-color: #FF6600;
+  padding: 5px;
+  color: #FFFFFF;
+  text-align: center;
+}
+h2 {
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+nw1{
+font-weight: bold;
+color: #FF6600;
+}
+table1{
+text-align:center;
+}
+tbody{
+text-align:center;
+}
+table2{
+position: relative;
+float: right;
+}

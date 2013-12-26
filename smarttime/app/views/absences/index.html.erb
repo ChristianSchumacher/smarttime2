@@ -1,5 +1,6 @@
+<%= stylesheet_link_tag 'global' %>
 <h1>Übersicht aller Abwesenheiten - SMP Automobilhandel AG Saarbrücken</h1>
-
+<table1>
 <table border="1">
   <thead>
     <tr>
@@ -14,7 +15,7 @@
       <th></th>
     </tr>
   </thead>
-
+	
   <tbody>
     <% @absences.each do |absence| %>
       <tr>
@@ -31,7 +32,7 @@
     <% end %>
   </tbody>
 </table>
-
+</table1>
 <br>
 
-<%= link_to 'Neue Abwesenheit erfassen', new_absence_path %>
+<nw1><%= link_to 'Neue Abwesenheit erfassen', new_absence_path %></nw1>
