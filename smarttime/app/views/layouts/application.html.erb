@@ -8,12 +8,12 @@
     Eingeloggt als <%= current_user.email %>. Nicht Sie?
     <%= link_to "Abmelden", destroy_user_session_path, :method => :delete %>
   <% else %>
-    <%= link_to "Regestrieren", new_user_registration_path %> oder <%= link_to "Anmelden", new_user_session_path %>
+    <%= link_to "Registrieren", new_user_registration_path %> oder <%= link_to "Anmelden", new_user_session_path %>
   <% end %>
 </div>
 
 
-  <title>SMART-Time</title>
+  <title>SmartTime</title>
   <% unless current_user.nil? %>
   	<%= render 'layouts/navitems' %>
   <% end %>

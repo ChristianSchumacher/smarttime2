@@ -1,9 +1,10 @@
-<table border="1">
-  <tr bgcolor="#E1E1E1" onMouseOver="this.bgColor='#CCCCFF'" onMouseOut="this.bgColor='#E1E1E1'">
+<%= stylesheet_link_tag 'global' %>
+<table_nav><table border="1">
+  <tr bgcolor="#F0F0F0" onMouseOver="this.bgColor='#F0F0F0'" onMouseOut="this.bgColor='#F0F0F0'">
   	<% @navitems = Navitem.all.order('rang ASC')%>
   	<% @navitems.each do |nav| %>
     <th><%= link_to nav.name, "http://localhost:3000/#{nav.url}" %></th>
     <% end %>
   </tr>
-
 </table>
+</table_nav>

@@ -38,3 +38,14 @@ table2{
 position: relative;
 float: right;
 }
+table_nav{
+color: #000;
+}
+table_nav:active{
+color: #FF6600;
+font-weight: bold;
+}
+table_nav:hover{
+background: #FFF;
+font-weight: bold;
+}

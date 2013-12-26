@@ -1,19 +1,20 @@
+<%= stylesheet_link_tag 'global' %>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Action:</strong>
+  <strong>Aktion:</strong>
   <%= @history.action %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Benutzer:</strong>
   <%= @history.user_id %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Beschreibung:</strong>
   <%= @history.description %>
 </p>
 
-<%= link_to 'Edit', edit_history_path(@history) %> |
-<%= link_to 'Back', histories_path %>
+<%= link_to 'Historie bearbeiten', edit_history_path(@history) %> |
+<%= link_to 'Zurück', histories_path %>

@@ -1,7 +1,7 @@
 <h2>Login - SMP Automobilhandel AG Saarbrücken</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
+  <div><%= f.label :email, 'eMail' %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
   <div><%= f.label :password, 'Passwort' %><br />
@@ -11,7 +11,7 @@
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
 
-  <div><%= f.submit "Sign in" %></div>
+  <div><%= f.submit "Einloggen" %></div>
 <% end %>
 
 <%= render "User/shared/links" %>

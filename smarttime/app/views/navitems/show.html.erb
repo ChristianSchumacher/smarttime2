@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'global' %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,7 +7,7 @@
 </p>
 
 <p>
-  <strong>Url:</strong>
+  <strong>URL:</strong>
   <%= @navitem.url %>
 </p>
 
@@ -15,5 +16,5 @@
   <%= @navitem.rang %>
 </p>
 
-<%= link_to 'Edit', edit_navitem_path(@navitem) %> |
-<%= link_to 'Back', navitems_path %>
+<%= link_to 'NavItem bearbeiten', edit_navitem_path(@navitem) %> |
+<%= link_to 'Zurück', navitems_path %>

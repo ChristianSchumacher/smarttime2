@@ -1,11 +1,12 @@
-<h1>Listing navitems</h1>
-
+<%= stylesheet_link_tag 'global' %>
+<h1>Übersicht der NavItems</h1>
+<table_nav>
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Url</th>
-      <th>Order</th>
+      <th>URL</th>
+      <th>Rang</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,14 +19,14 @@
         <td><%= navitem.name %></td>
         <td><%= navitem.url %></td>
         <td><%= navitem.rang %></td>
-        <td><%= link_to 'Show', navitem %></td>
-        <td><%= link_to 'Edit', edit_navitem_path(navitem) %></td>
-        <td><%= link_to 'Destroy', navitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'NavItem anzeigen', navitem %></td>
+        <td><%= link_to 'NavItem bearbeiten', edit_navitem_path(navitem) %></td>
+        <td><%= link_to 'NavItem löschen', navitem, method: :delete, data: { confirm: 'NavItem wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</table_nav>
 <br>
 
-<%= link_to 'New Navitem', new_navitem_path %>
+<%= link_to 'Neues NavItem anlegen', new_navitem_path %>
