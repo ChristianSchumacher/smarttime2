@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag 'global' %>
+<%= stylesheet_link_tag 'activities' %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -56,5 +56,5 @@
   <%= @activity.data_privacy_statement %>
 </p>
 
-<%= link_to 'Auftrag bearbeiten', edit_activity_path(@activity) %> |
-<%= link_to 'Zurück', activities_path %>
+<%= link_to image_tag('/images/edit.png'), edit_activity_path(@activity) %> |
+<%= link_to image_tag('/images/go_back.png'), activities_path %>

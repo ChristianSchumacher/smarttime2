@@ -22,6 +22,10 @@
     <%= f.text_field :regestration_date,:value => Date.today.strftime("%d.%m.%Y")%>
   </div>
   <div class="field">
+    <%= f.label :regestration_date, 'Kilometerstand' %><br>
+    <%= f.text_field :regestration_date,:value => Date.today.strftime("%d.%m.%Y")%>
+  </div>
+  <div class="field">
     <%= f.label :fuel, 'Kraftstoffart' %><br>
     <%= f.select :fuel, [['Diesel', 'Diesel'], ['Benzin', 'Benzin'], ['Gas', 'Gas'], ['Hybrid', 'Hybrid'], ['Elektro', 'Elektro']]%>
   </div>

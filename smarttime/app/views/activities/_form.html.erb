@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag 'global' %>
+<%= stylesheet_link_tag 'activities' %>
 <%= form_for(@activity) do |f| %>
   <% if @activity.errors.any? %>
     <div id="error_explanation">
@@ -56,7 +56,7 @@
     <%= f.label :data_privacy_statement, 'Datenschutzerklärung akzeptiert?' %><br>
     <%= f.check_box :data_privacy_statement %>
   </div>
-  <div class="actions">
-    <%= f.submit 'Auftrag erfassen' %>
-  </div>
+  <div id="submit1><div class="actions">
+    <%= image_submit_tag('/images/new.png')%>
+  </div></div id="submit1>
 <% end %>

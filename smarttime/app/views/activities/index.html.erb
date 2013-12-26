@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag 'global' %>
+<%= stylesheet_link_tag 'activities' %>
 <h1>Auftragserfassung - SMP Automobilhandel AG Saarbrücken</h1>
 <%= render  'available' %>
 <table border="2">
@@ -17,7 +17,7 @@
       <th>Datenschutzerklärung akzeptiert?</th>
       <th></th>
       <th></th>
-      <th></th>
+      <!--<th></th>-->
     </tr>
   </thead>
 
@@ -35,9 +35,9 @@
         <td><%= activity.direct_contact %></td>
         <td><%= activity.customer_service_agreement %></td>
         <td><%= activity.data_privacy_statement %></td>
-        <td><%= link_to 'Auftrag anzeigen', activity %></td>
-        <td><%= link_to 'Auftrag bearbeiten', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Auftrag löschen', activity, method: :delete, data: { confirm: 'Auftrag wirklich löschen?' } %></td>
+        <!--<td><%= link_to image_tag('/images/show.png'), activity%></td>-->
+        <td><%= link_to image_tag('/images/edit.png'), edit_activity_path(activity) %></td>
+        <td><%= link_to image_tag('/images/delete.png'), activity, method: :delete, data: { confirm: 'Auftrag wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -45,4 +45,4 @@
 
 <br>
 
-<nw1><%= link_to 'Neuen Auftrag erfassen', new_activity_path %><nw1>
+<nw1><%= link_to image_tag('/images/new.png'), new_activity_path %><nw1>
