@@ -39,7 +39,7 @@ position: relative;
 float: right;
 }
 table_nav{
-color: #000;
+color: #000;	
 }
 table_nav:active{
 color: #FF6600;
