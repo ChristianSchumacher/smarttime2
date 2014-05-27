@@ -1,4 +1,8 @@
 Smarttime::Application.routes.draw do
+  resources :cars
+
+  resources :customers
+
   resources :navitems
 
   resources :holydays

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vorname:</strong>
+  <%= @customer.firstname %>
+</p>
+
+<p>
+  <strong>Nachname:</strong>
+  <%= @customer.lastname %>
+</p>
+
+<p>
+  <strong>Straße:</strong>
+  <%= @customer.street %>
+</p>
+
+<p>
+  <strong>PLZ:</strong>
+  <%= @customer.zip %>
+</p>
+
+<p>
+  <strong>Stadt:</strong>
+  <%= @customer.city %>
+</p>
+
+<p>
+  <strong>Land:</strong>
+  <%= @customer.country %>
+</p>
+
+<p>
+  <strong>Bemerkung:</strong>
+  <%= @customer.comment %>
+</p>
+
+<p>
+  <strong>Auto:</strong>
+  <%= @customer.car %>
+</p>
+
+<p>
+  <strong>Telefon:</strong>
+  <%= @customer.phone %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @customer.fax %>
+</p>
+
+<p>
+  <strong>Mobil:</strong>
+  <%= @customer.cellphone %>
+</p>
+
+<%= link_to 'Kunden bearbeiten', edit_customer_path(@customer) %> |
+<%= link_to 'Zurück zur Übersicht', customers_path %>

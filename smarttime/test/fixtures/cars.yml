@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sign: MyString
+  model: MyString
+  last_case: 2014-05-27
+  buy_date: 2014-05-27
+  next_maintenance: 2014-05-27
+  comments: MyText
+  happy: false
+
+two:
+  sign: MyString
+  model: MyString
+  last_case: 2014-05-27
+  buy_date: 2014-05-27
+  next_maintenance: 2014-05-27
+  comments: MyText
+  happy: false

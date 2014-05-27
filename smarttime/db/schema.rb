@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223225243) do
+ActiveRecord::Schema.define(version: 20140527101345) do
 
   create_table "absences", force: true do |t|
     t.date     "start_day"
@@ -35,6 +35,34 @@ ActiveRecord::Schema.define(version: 20131223225243) do
     t.boolean  "direct_contact"
     t.boolean  "customer_service_agreement"
     t.boolean  "data_privacy_statement"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cars", force: true do |t|
+    t.string   "sign"
+    t.string   "model"
+    t.date     "last_case"
+    t.date     "buy_date"
+    t.date     "next_maintenance"
+    t.text     "comments"
+    t.boolean  "happy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customers", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "street"
+    t.integer  "zip"
+    t.string   "city"
+    t.string   "country"
+    t.text     "comment"
+    t.string   "car"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "cellphone"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

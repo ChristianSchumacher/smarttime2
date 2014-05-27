@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sign:</strong>
+  <%= @car.sign %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @car.model %>
+</p>
+
+<p>
+  <strong>Last case:</strong>
+  <%= @car.last_case %>
+</p>
+
+<p>
+  <strong>Buy date:</strong>
+  <%= @car.buy_date %>
+</p>
+
+<p>
+  <strong>Next maintenance:</strong>
+  <%= @car.next_maintenance %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @car.comments %>
+</p>
+
+<p>
+  <strong>Happy:</strong>
+  <%= @car.happy %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>
